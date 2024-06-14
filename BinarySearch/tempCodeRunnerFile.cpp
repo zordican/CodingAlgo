@@ -52,9 +52,10 @@ int lowerBound(vector<int> arr, int n, int x)
 
 int main()
 {
-    vector<int> v = {2,3,5,6,7,8,11,11,11,78};
-    int ans = lowerBound(v, v.size(),8);
+    vector<int> v = {2,3,5,6,7,8,11,11,11};
+    int ans = lowerBound(v, v.size(),11);
+    int ans1 = upperBound(v, v.size(),11);
 
-    cout<<ans<<endl;
+    cout<<ans<<endl<<ans1<<endl;
 
 }
