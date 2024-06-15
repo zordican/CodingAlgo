@@ -58,8 +58,8 @@ bool leafSimilar(TreeNode* root1, TreeNode* root2) {
     }
 
 int main() {
-	vector<int> nums1 = { 119,113,null,11,30,43,76,15,60,67,74};
-	vector<int> nums2 = { 11,69,60,115,66,15,60,67,74,null,76 };
+	vector<int> nums1 = { 119,113,0,11,30,43,76,15,60,67,74};
+	vector<int> nums2 = { 11,69,60,115,66,15,60,67,74,0,76 };
 	TreeNode* root1 = buildTree(nums1);
 	TreeNode* root2 = buildTree(nums2);
 
