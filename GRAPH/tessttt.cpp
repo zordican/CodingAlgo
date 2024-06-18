@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-    vector<int> bfsOfGraph(int V, vector<int> adj[])
+    vector<int> bfsOfGraph(int V, vector<int>& adj[])
     {
         bool vis[V];
         vis[0] = 1;

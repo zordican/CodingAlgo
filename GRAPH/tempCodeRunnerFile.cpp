@@ -9,10 +9,8 @@ using namespace std;
         queue < int > q;
         q.push(0);
         vector<int> bfs;
-        cout<<"I am running"<<endl;
         while (!q.empty())
         {
-            cout<<"I am also running"<<endl;
             int node = q.front();
             q.pop();
             bfs.push_back(node);
@@ -22,7 +20,6 @@ using namespace std;
                 {
                     vis[it] = 1;
                     q.push(it);
-                    cout<<"I am also running"<<endl;
                 }
             }
         }
@@ -52,4 +49,8 @@ int main()
     cout<<it<<" ";
    }
    cout<<endl;
+
+   return 0;
 }
+
+//graph is not working in vs code, use online compiler
