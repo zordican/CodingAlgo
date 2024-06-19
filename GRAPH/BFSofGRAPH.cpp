@@ -4,7 +4,8 @@ using namespace std;
 
     vector<int> bfsOfGraph(int V, vector<int> adj[])
     {
-        bool vis[V];
+        // bool vis[V]; //never use without initialisation
+        vector<int> vis(V,0); //very very important line
         vis[0] = 1;
         queue < int > q;
         q.push(0);
@@ -14,7 +15,7 @@ using namespace std;
             int node = q.front();
             q.pop();
             bfs.push_back(node);
-            for (auto it:adj[node])
+            for (auto it:adj[node])//queue se nikalo aur check karo uska koi neighbour to nahi
             {
                 if (!vis[it])
                 {
