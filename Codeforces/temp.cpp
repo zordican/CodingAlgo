@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
-    cout<<2255/100;
-    cout<<2255%100;
+   cout<<127/10;
+   cout<<endl;
+   cout<<127%10;
+
 }
