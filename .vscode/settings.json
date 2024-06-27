@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "vector": "cpp"
-    }
+        "vector": "cpp",
+        "__node_handle": "cpp",
+        "queue": "cpp"
+    },
+    "Codegeex.Chat.LanguagePreference": "English",
+    "Codegeex.Comment.LanguagePreference": "English",
+    "Codegeex.SidebarUI.LanguagePreference": "English"
 }
