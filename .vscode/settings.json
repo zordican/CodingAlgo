@@ -3,7 +3,8 @@
         "iostream": "cpp",
         "vector": "cpp",
         "__node_handle": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "set": "cpp"
     },
     "Codegeex.Chat.LanguagePreference": "English",
     "Codegeex.Comment.LanguagePreference": "English",
