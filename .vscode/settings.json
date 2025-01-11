@@ -4,7 +4,8 @@
         "vector": "cpp",
         "__node_handle": "cpp",
         "queue": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "string": "cpp"
     },
     "Codegeex.Chat.LanguagePreference": "English",
     "Codegeex.Comment.LanguagePreference": "English",
