@@ -25,7 +25,8 @@ int upperBound(vector<int> arr, int n, int x)
 
      return ans;
 }
-
+//Lower Bound: arr[ind] >= target, in lower/upper bound we get the index
+//initialise ans as the size of the array, that is the default case
 int lowerBound(vector<int> arr, int n, int x)
 {
     int low = 0, high = n - 1;
