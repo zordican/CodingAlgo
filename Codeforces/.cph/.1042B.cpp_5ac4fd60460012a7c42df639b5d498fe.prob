@@ -1,0 +1,1 @@
+{"name":"Local: 1042B","url":"/Users/rishabhrxjn/Desktop/Binary Tree/CodingAlgo/Codeforces/1042B.cpp","tests":[{"id":1754888110329,"input":"3\n2\n3\n5","output":"-1 2\n-1 3 -1\n-1 3 -1 3 -1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/rishabhrxjn/Desktop/Binary Tree/CodingAlgo/Codeforces/1042B.cpp","group":"local","local":true}
