@@ -1,42 +1,52 @@
-#include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
+#define int long long
+#define all(v) (v).begin(), (v).end()
+#define endl '\n'
 
-    int t;
+struct Compare {
+    bool operator()(const pair<int,int> &a, const pair<int,int> &b) {
+        if (a.first == b.first)
+            return a.second > b.second; 
+        return a.first < b.first; 
+    }
+};
+
+int32_t main() {
+    fastio;
+
+    int t = 1;
     cin >> t;
-
-    while (t--)
-    {
-        int n,k;
+   
+    while (t--) {
+        int n, k;
         cin >> n >> k;
-        vector<int> v1(n);
-        for (int &x : v1) cin >> x; //nice
-
-        vector<int> v2(n);
-        vector<int> visited(n,-1);
-        for (int &x : v2) cin >> x;
-        bool canChange = false;
-        bool allPassed = true;
-       for(int i = 0; i < n; i++){
-        canChange = false;
-        
-        for(int j = 0; j < n; j++){
-            if(visited[j] == -1){
-            if(abs(v1[i] - v2[j])%k == 0 || abs(abs((v1[i] % k) - k) - v2[j])%k == 0){canChange = true;visited[j] = 1;break;}}
-            else continue;
+        vector<int> v(n);
+        for(auto& it:v){
+            cin >> it;
         }
-        if (!canChange) {
-        allPassed = false;
-        break;
+        priority_queue<pair<int,int>, vector<pair<int,int>>, Compare> pq;
+        for(int i = 0; i < n; i++){
+            pair<int,int> p;
+            p.first = v[i];
+            p.second = i;
+            pq.push(p);
+        }
+        vector<int> ans;
+        while(!pq.empty()){
+            pair<int,int> top = pq.top();
+            pq.pop();
+            top.first -= k;
+
+            if(top.first <= 0){ans.push_back(top.second + 1);}
+            else pq.push(top);
+        }
+        for(auto it : ans){
+            cout<<it<<" ";
+        }
+        cout << "\n";
     }
-       }
-       cout<<(allPassed? "YES":"NO")<<endl;
-    }
-}
-//cout<<v1[i]<<" "<<v2[j]<<"\n";
-//abs(v1[i] - v2[j])%k == 0 || abs(abs((v1[i] % k) - k) - v2[j])%k == 0
+    return 0;
+} 
