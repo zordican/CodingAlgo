@@ -1,0 +1,5 @@
+{
+    "language": "cpp",
+    "compile": "clang++ -std=c++20 -O2 -Wall -Wextra $fullFileName -o $dir/a.out",
+    "run": "$dir/a.out"
+}

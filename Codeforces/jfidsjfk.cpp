@@ -42,7 +42,7 @@ void solve(int n,int s,int m){
        }
 
         cout<<"NO"<<endl;
-        retun;
+        return;
 }
 
 int main()
