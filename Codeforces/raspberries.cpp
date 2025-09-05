@@ -35,17 +35,15 @@ int32_t main() {
         else{
             int mini = INT_MAX;
             int numEven = 0;
-            bool canbe = false;
+            // bool canbe = false;
             for(auto it : v){
                 mini = min(mini, (k - (it % k)));
-                if(it%2 == 0){numEven++;if(numEven == 2){canbe = true; break;}}
-                if(it%4 == 0){
-                    
-                    canbe = true;
-                    break;
-                }
+                if(it%2 == 0)numEven++;
+                
             }
-            (canbe ? cout << 0 << "\n" : cout << min(mini, 2 - numEven) << "\n");
+            numEven = min((int)2, numEven);
+
+            cout << min(mini, 2 - numEven) << "\n";
 
         }
     }
