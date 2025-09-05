@@ -24,20 +24,29 @@ int32_t main() {
         if(k != 4){int mini = INT_MAX;
 
         for(auto it : v){
-            mini = min(mini,it%k);
+            if(it % k == 0){
+                mini = 0;
+                break;
+
+            }
+            mini = min(mini,(k - (it%k)));
         }
         cout << mini << "\n";}
         else{
+            int mini = INT_MAX;
             int numEven = 0;
             bool canbe = false;
             for(auto it : v){
+                mini = min(mini, (k - (it % k)));
                 if(it%2 == 0){numEven++;if(numEven == 2){canbe = true; break;}}
                 if(it%4 == 0){
+                    
                     canbe = true;
                     break;
                 }
             }
-            (canbe ? cout << 0 << "\n" : cout << 2 - numEven << "\n");
+            (canbe ? cout << 0 << "\n" : cout << min(mini, 2 - numEven) << "\n");
+
         }
     }
     return 0;
